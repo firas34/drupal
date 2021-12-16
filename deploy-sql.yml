@@ -20,6 +20,15 @@ spec:
       containers:
       - image: mysql:5.7
         name: mysql
+        env:
+          - name: MYSQL_ROOT_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: drupal-mysql-secret
+          - name: MYSQL_DATABASE
+            valueFrom:
+              secretKeyRef:
+                name: drupal-mysql-secret
         volumeMounts:
         - mountPath: "/var/lib/mysql"
           name: mypd

@@ -4,7 +4,7 @@ metadata:
   creationTimestamp: null
   labels:
     app: drupal-mysql
-  name: drupal-mysql
+  name: drupal-mysql-service
 spec:
   ports:
   - port: 3306
